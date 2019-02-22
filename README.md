@@ -1,2 +1,5 @@
 # MyJavaPlayground
 MyJavaPlayground
+
+first commit
+
