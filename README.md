@@ -2,4 +2,6 @@
 MyJavaPlayground
 
 first commit
+terminal commit
+
 
