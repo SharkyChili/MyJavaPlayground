@@ -13,10 +13,13 @@ public class MoneyRandom {
         int population = 20;
         int iteration = 10000;
         double stderr = 0.5;
+        int part = 10000;
         //均值相同，前n-1个人方差相同的算法
-        double[][] arr = alg1(total,population, iteration,stderr);
+        //double[][] arr = alg1(total,population, iteration,stderr);
         //每一个人拿剩下的数做随机的算法
         //double[][] arr = alg2(total,population,iteration);
+        //古典概率
+        double[][] arr = alg3(total,population,iteration,part);
         printarr(arr);
     }
 
@@ -64,6 +67,28 @@ public class MoneyRandom {
                 }else {
                     arr[j][i] = left;
                 }
+            }
+        }
+        return arr;
+    }
+
+    /**
+     * 古典概率
+     * @param total
+     * @param population
+     * @param iteration
+     * @return
+     */
+    private static double[][] alg3(double total, int population, int iteration,int part){
+        double[][] arr = new double[population][iteration];
+        //做count次试验
+        //生成一个population*count的矩阵
+        //population为人数，count为次数
+        Random random = new Random();
+        for (int i = 0; i < iteration ; i++){
+            for (int p = 0; p < part; p++) {
+                int person = random.nextInt(population);
+                arr[person][i] += total/part;
             }
         }
         return arr;
