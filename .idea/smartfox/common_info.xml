@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="SmartFoxWorkToolsProjectState">
+    <option name="appId" value="null" />
     <option name="branch" value="master" />
     <option name="gitUrl" value="https://github.com/fw1036994377/MyJavaPlayground.git" />
     <option name="localBranch" value="master" />
-    <option name="revision" value="f92f94cfb510d0384d1b69ecc307d0252b59131f" />
+    <option name="revision" value="8bb40a5f9a0164a7b64a2ec4465ba42191ac1e07" />
   </component>
 </project>
