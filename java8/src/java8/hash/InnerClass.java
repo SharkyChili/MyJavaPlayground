@@ -38,6 +38,9 @@ public class InnerClass {
      */
     @Override
     public int hashCode() {
-        return Objects.hash(a);
+        int result = 17;
+        result = 31 * result + a.hashCode();
+        result = 31 * result + b.hashCode();
+        return result;
     }
 }
